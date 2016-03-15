@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>MaptimeDC - Intro to OpenStreetMap</title>
+</head>
+<body>
+<!-- built in vi by OpenStreetMap user: RoadGeek_MD99 -->
+
+<article class="tutorial" id="tutorial">
+<h1 class="tutorial-title">Maptime DC - Intro to OpenStreetMap</h1>
+
+
+<h2>Introduction</h2>
+<p>What is OpenStreetMap (OSM)?  
+<a href="https://www.openstreetmap.org/">OpenStreetMap</a> has been called the "Wikipedia of maps" (not actually a part of <a href="www.wikipedia.org/">Wikipedia</a>).</p>
+
+<p>Why OpenStreetMap?  Most maps aren't free!  Maps by Google, the government and others can be expensive to license and restrictive to use.  In some countries, you must have a license to use any map of their country and submit your map for approval before you can publish it.</p><p>So like Wikipedia, why can&#39;t we make a map ourselves?</p>
+
+<p><b>OSM</b> is an 11 year old Internet project to create a map of the world.  It is free for anyone to use and was built by (mostly) volunteers using GPS, air photos and open-source software.  It has functions for rendering, routing and geocoding, just like other commercial maps.  Since OSM is easy to use with very few restrictions, many creative uses have occurred, including such varied applications as smart phone navigation, exercise trackers, 3d modeling and disaster relief.  OSM has commercial, government, NGO, personal, academic, and hobbyist users all over the world.
+
+<h1>Sample maps</h1>
+<p>Regular rendering (drawing)</p>
+<img src="img/plain.png" alt="Regular" height="480" width="800" /></p>
+
+<p>Cycle</p>
+<img src="img/cycle.png" alt="Bike routes" height="480" width="800" /></p>
+
+<p>Transport</p>
+<img src="img/transport.png" alt="Bus and rail routes" height="480" width="800" /></p>
+
+<p>MapQuest Open</p>
+<img src="img/MapQuest.png" alt="MapQuest Open" height="480" width="800" /></p>
+
+<p>Humanitarian</p>
+<img src="img/humanitarian.png" alt="Humanitarian" height="480" width="800" /></p>
+
+<h2>Core Data Elements / Geographic Objects</h2>
+<ul>
+<li>Node - A point in space with latitude, longitude (Y, X) and a node ID.  Used to model stand-alone point features (Points of Interest), or the shape of a way.
+</ul>
+<ul>
+<li>Way - An ordered list of nodes which makes a line.  Used for roads, railways, streams, walls, etc.  Limit: 2,000 nodes in a way.
+</ul>
+<ul>
+<li>    Closed Way - A way that ends where it began, used to model simple areas (polygons) like a building or a lake.  Or it can just be a road that loops back on itself.
+</ul>
+<ul>
+<li>Tag - A key and value pair, used to describe an element.  A key describes a broad class of features (e.g. highway, building, railway) while a value details the specific feature that was generally classified by the key (e.g. highway=motorway).  Many elements have multiple tags to give information about them.  For example: name="G Street Northwest", highway=tertiary, lanes=2 and cycleway=lane.
+</ul>
+<ul>
+<li> Relation - A linkage to group logical or geographic relationships between other elements, having tags to describe this relationship.  Examples: polygons with holes, highway and bus routes, and turn restrictions. 
+</ul>
+
+<p><a href="http://wiki.openstreetmap.org/wiki/Map_Features">How to Map Features</a></p>
+
+<h2>When I grow up, I want to be a closed way?</h2>
+<p>A node can represent a amenity=fast_food restaurant.  But you could go back and make a way around your node and tag that way with building=yes, name=Wade's, amenity=fast_food, cuisine=burger.  But suppose the building has a hole in the center?  You could then convert your building to a relation, where the relation has the tags, and the ways represent the outer and inner edge of the building.</p>
+<h2>Unlike some GIS systems, every geometry (nodes and ways) can be shared.</h2>
+<p>For example, a node can join a road (way) and railway (way) and that node should be tagged as railway=level_crossing.  There aren't separate themes of points, lines and polygons.</p>
+
+<h2><a href="https://wiki.openstreetmap.org/wiki/Beginners%27_guide">Beginners Guide</a> & <a href="https://www.openstreetmap.org/help">Help</a></h2>
+
+<h2>TIGER & Imports</h2>
+<p>TIGER is the US Census Bureau's map.  As Federal data, it is in the Public Domain and was imported in 2007 to form the basis of the USA.  It is bad in many areas (poor shape, no one-ways, bridges and tunnels not modeled) and while the major US cities have been cleaned up, many smaller cities and rural areas are untouched.</p>
+<p><img src="img/TIGER.png" alt="TIGER over Bing maps showing misalignment" height="480" width="800" /></p>
+
+<p>Imports:</p>
+<ul>
+<li>They are hard to do!  But if you want to try...
+<li>Read the import guidelines and prepare some sample data.
+<li>E-mail your proposal to the imports mailing lists.
+<li>Respond to questions and adjust plan as needed.
+<li>Do the import.
+<li>Run Quality Assurance.
+</ul>
+<p>Automated edits are similar, but even less popular.  If not discussed and agreed upon, your edits will be reverted (removed).</p>
+
+<h1>Editors</h1>
+
+<p>OpenStreetMap has multiple editors.  Most popular for your laptop...</p>
+
+<h2>ID</h2>
+<p>Best starter editor.  Friendly, in-browser and existing data is downloaded automatically as you move.</p>
+<p><img src="img/id.png" alt="ID editor" height="480" width="800" /></p>
+
+<h2>Potlatch 2</h2>
+<p>Old starter editor.  Not as easy as ID, needs Flash but more features.</p>
+<p><img src="img/Potlatch2.png" alt="Potlatch 2 editor" height="480" width="800" /></p>
+
+<h2>JOSM</h2>
+<p>JOSM = Java OpenStreetMap editor.  Most complicated and some would say the best editor.  It (and Java) needs to be installed.</p>
+<p><img src="img/JOSM.png" alt="JOSM editor" height="480" width="800" /></p>
+
+<p>OSM for your smart phone...</p>
+<p>OsmAnd for Android/ iOS: edits POIs and submits GPS tracks</p><p>
+<img src="img/Android-osmand-routing.png" height="480 width="800"/></p>
+
+<p>Pushpin OSM iOS POI editor</p><p>
+<img src="img/Pushpin_OSM_screenshot.png" height="480 width="800"/></p>
+
+<p>Go Map!! iOS map editor for POIs and ways</p><p>
+<img src="img/GoMap1.png" height="480" width="320"/ ></p>
+
+<h2>A few hints, warnings and common mistakes</h2>
+<h3>Do this</h3>
+<ul>
+<li>Map what is on the ground and what you can see.  One exception is political boundaries.
+<li>OSM uses British English, so some terms may be different.  The Wiki is your friend.
+<li>A name tag should be a true name, and not describe the object.  Example: name=Water Tower is wrong, but man_made=water_tower is correct.
+<li>Map facts, not opinions.
+<li>Connect a road (way) at the intersection of another road with a node.
+<li>Read, ask <a href="http://wheelmap.org">questions</a>, look at how others have mapped.
+<li>No real central authority, more a democracy/meritocracy, so some standards and tags may seem odd.  Tags can be invented, typo-ed or become obsolete.
+<li>Add good change set comments.  What did you do?  What is your source? NO: "Added some things".  YES: Added buildings from imagery.  New roads from GPS trace.  Addresses from survey.  Or even more details.
+<li>Square the corners of your buildings.
+<li>Have fun!</li>
+</ul>
+<h3>Don'ts</h3>
+<ul>
+<li>Don't copy from Google (Maps/StreetView) or any other copyrighted (c) source.  <a href="http://www.mapillary.com">Mapillary</a> is allowed.
+<li>Connect a bridge to the road under it.
+<li>Add a one-way to a road without checking that the whole road is one way.
+<li>Add a node (amenity=bank) into a building that is already tagged (as amenity=bank).  That would duplicate effort.
+</ul>
+<h3>Hints</h3>
+<ul>
+<li>For street names, spell them out, like "Saint Joe Street", not "St Joe St".  Computers can abbreviate, but they aren't as good at expanded abbreviations.  Think about a navigation system saying "Left on Street Joe Saint".
+<li>Tags in lower case.  Names in Mixed Case.  Some exceptions.
+<li>Imagery and even GPS tracks can be off.  Don't move someone's work without looking at their edit history and/or contacting them.
+<li>Save your changes frequently.
+<li>The main map can show your changes some times in under 5 minutes.  (Refresh your browser.)  Some projects only refresh their views daily or weekly.
+<li>If a building is leaning, map the roof, but drag it over the ground level.
+<li>Long straight ways (railway and roads) may not show up until there is a node.  You may have to zoom around to get the data.
+<li>Undo is your friend.
+<li>Beware of new roads on old imagery.  If I trace a realigned road with GPS, Bing may not catch up for another year.  So don't "fix" it by dragging it back.
+<li>Happy Mapping!
+</ul>
+<h1>Is it a map or a database?</h1>
+<p><b>Both!</b>  It is a database, so if you and I add the same building at the same time, we get duplicates.  If we edit the same thing at the same time, the first one to check in wins.  Save often!
+
+<h1>Projects</h1>
+
+<p><a href="https://hotosm.org">Humanitarian OpenStreetMap Team (HOT)</a> and <a href="http://www.missingmaps.org">Missing maps for disaster response and humanitarian work.</a></p>
+
+<li><a href="http://tasks.hotosm.org">HOT's Tasking Manager</a></li>
+<img src="img/HOT-Fiji.png" alt="Tasking manager" height="480" width="800" /></p>
+
+<p><a href="http://openfiremap.org">OpenFireMap</a></p>
+<img src="img/fire.png" alt="Fire stations and hydrants" height="480" width="800" /></p>
+
+<p><a href="http://wheelmap.org">WheelMap</a></p>
+<img src="img/WheelMap.png" alt="Wheel chair access" height="480" width="800" /></p>
+
+<h2p>F4maps's 3D of DC</h2>
+<p>Tag your building with building:levels=#.<p>
+<img src="img/RainyWhiteHouse.png" alt="Rainy White House in simple 3d" height="480" width="800" /></p>
+
+<h1>MapRoulette</h1>
+<img src="img/MapRoulette.png" alt="Maproulette" height="480" width="800" /></p>
+
+
+<h3>Notes</h3>
+<p>A Note is a quick way to point out a problem or missing map data.  If you're logged in, it is tagged with your ID.  Notes are not authoritative, so use them as guidance to fix things.</p>
+<img src="img/NotesControl.png" alt="How to turn on Notes" height="480" width="400" /></p>
+<img src="img/Notes.png" alt="Notes or Norfolk" height="480" width="800" /></p>
+<p>Another way to note a problem is the fixme tag.  (Alternate forms are FIXME or older TODO tags.)</p>
+<br>
+<h1>Exporting data</h1>
+<img src="img/geofabrik.png" alt="Geofabrik download for North America" height="480" width="800" /></p>
+
+<p>QGIS has both Vector->OpenStreetMap->Download Data and OpenLayers Plug-in with OpenStreetMap</p></p>
+<img src="img/QGIS-OpenLayers.png" alt="QGIS-OpenLayers" height="480" width="800" /></p>
+
+<h2>Overpass queries</h2>
+<p>Overpass can be used for both export (geoJSON!) and Quality Assurance</p>
+<img src="img/overpass.png" alt="overpass query showing fixme around Lexington, KY" height="480" width="800" /></p>
+
+<h1><a href="http://wiki.openstreetmap.org/wiki/Quality_assurance">Quality Assurance</a></h1>
+<p><a href="http://tools.geofabrik.de/osmi/">Geofabrik's OpenStreetMap Inspector</a></p>
+<img src="img/OSMI.png" alt="OSM Inspector with bad addresses in Centreville, VA" height="480" width="800" /></p>
+
+
+<h1>Sign up</h1>
+
+<p>If you don&#39;t already have an account, visit the <a href="https://www.openstreetmap.org/user/new">sign up page</a> and create one.</p>
+<img src="img/Signup.png" alt="signup" height="480" width="800" />
+
+<p>You&#39;re ready to map!</p>
+
+<br>
+<br>
+<h1>Questions?</h1>
+<br>
+<br>
+<h1>Mini Mapathon!</h1>
+<p><a href="https://www.openstreetmap.org">Go to OpenStreetMap</a></p>
+
+<p>Navigate to an area you like and/or pick a project from above.</p>
+
+<p>Click on Edit with ID...</p>
+<br><br>
+<p>The end.</p>
+</ul>
+
+</div>
+
+</body>
+</html>
